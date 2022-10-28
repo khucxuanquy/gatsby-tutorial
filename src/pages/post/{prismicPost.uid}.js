@@ -14,7 +14,7 @@ const Post = ({ data }) => {
   return (
     <Layout uidActive={data.prismicPost.data.category.document.uid}>
       <div style={wrapPost}>
-        <img src={post.thumbnail.url} style={{ width: '230px' }} />
+        <img src={post.thumbnail.url} alt="" style={{ width: '230px' }} />
         <h1>{post.title.text}</h1>
         <div dangerouslySetInnerHTML={{ __html: post.content.html }} />
       </div>

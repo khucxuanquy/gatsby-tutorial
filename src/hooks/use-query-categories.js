@@ -1,19 +1,20 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export default () => useStaticQuery(
-  graphql`
-  {
-    allPrismicCategory {
-      nodes {
-        uid
-        data {
-          title {
-            text
+export default function UseQueryCategories() {
+  return useStaticQuery(
+    graphql`
+      {
+        allPrismicCategory {
+          nodes {
+            uid
+            data {
+              title {
+                text
+              }
+            }
           }
         }
       }
-    }
-  }
-  
-  `
-)
+    `
+  )
+} 
